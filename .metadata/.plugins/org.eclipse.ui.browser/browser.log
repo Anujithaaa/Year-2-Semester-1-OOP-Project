@@ -1,0 +1,20 @@
+
+May 24, 2021 16:51:06.601 NEW SESSION
+May 24, 2021 16:51:06.601 [20432:17704:0524/165106.599:ERROR:device_event_log_impl.cc(214)] [16:51:06.599] USB: usb_device_handle_win.cc:1054 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+May 24, 2021 16:51:06.601 [20432:17704:0524/165106.599:ERROR:device_event_log_impl.cc(214)] [16:51:06.599] USB: usb_device_handle_win.cc:1054 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+May 24, 2021 16:51:06.631 [20432:17704:0524/165106.631:ERROR:device_event_log_impl.cc(214)] [16:51:06.632] Bluetooth: bluetooth_adapter_winrt.cc:1162 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+May 26, 2021 16:02:37.813 NEW SESSION
+May 26, 2021 16:02:37.813 [10716:5820:0526/160237.811:ERROR:device_event_log_impl.cc(214)] [16:02:37.811] USB: usb_device_handle_win.cc:1058 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+May 26, 2021 16:02:37.908 [10716:5820:0526/160237.907:ERROR:device_event_log_impl.cc(214)] [16:02:37.908] Bluetooth: bluetooth_adapter_winrt.cc:1162 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+May 26, 2021 16:20:58.577 [19348:12508:0526/162058.577:ERROR:device_event_log_impl.cc(214)] [16:20:58.576] USB: usb_device_handle_win.cc:1058 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+May 26, 2021 16:20:58.650 [19348:12508:0526/162058.649:ERROR:device_event_log_impl.cc(214)] [16:20:58.649] Bluetooth: bluetooth_adapter_winrt.cc:1162 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+May 26, 2021 18:53:16.130 [19348:3488:0526/185316.128:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+May 26, 2021 20:28:25.08 [19348:3488:0526/202825.008:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+
+May 28, 2021 16:01:06.281 NEW SESSION
+May 28, 2021 16:01:06.281 [7888:1696:0528/160106.276:ERROR:device_event_log_impl.cc(214)] [16:01:06.276] Bluetooth: bluetooth_adapter_winrt.cc:1162 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+May 28, 2021 16:04:00.936 [7888:1696:0528/160400.935:ERROR:device_event_log_impl.cc(214)] [16:04:00.934] USB: usb_service_win.cc:258 Failed to get device driver name: Element not found. (0x490)
+May 28, 2021 16:04:00.945 [7888:1696:0528/160400.945:ERROR:device_event_log_impl.cc(214)] [16:04:00.944] USB: usb_service_win.cc:281 SetupDiEnumDeviceInterfaces: No more data is available. (0x103)
+May 28, 2021 16:04:03.653 [7888:1696:0528/160403.652:ERROR:device_event_log_impl.cc(214)] [16:04:03.651] USB: usb_service_win.cc:258 Failed to get device driver name: Element not found. (0x490)
+May 28, 2021 16:04:03.683 [7888:1696:0528/160403.662:ERROR:device_event_log_impl.cc(214)] [16:04:03.661] USB: usb_service_win.cc:281 SetupDiEnumDeviceInterfaces: No more data is available. (0x103)

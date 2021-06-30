@@ -1,0 +1,144 @@
+package anujitha;
+
+import java.util.List;
+//import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.Statement;
+
+
+public class databaseutil {
+	
+	private static Connection con = null;
+	private static Statement stat = null;
+	private static ResultSet rs = null;
+	
+    
+    public static List <Admin> validate (String userName, String passWord){
+        
+        ArrayList <Admin> cus = new ArrayList<>();
+    
+    //validate
+    try {
+        Class.forName("com.mysql.jdbc.Driver");
+           	
+    	con = DBConnect.getConnection();
+    	stat = con.createStatement();
+    	String sql = "select * from admindetails where username = '"+userName+"' and  password = '"+passWord+"'";
+    	rs = stat.executeQuery(sql);
+        
+        if (rs.next()) {
+            String userA = rs.getString(1);
+            String passwordA = rs.getString(2);
+
+        Admin a = new Admin (userA, passwordA);
+        cus.add(a);
+        }
+    }
+    
+    catch(Exception e) {
+        e.printStackTrace();
+    }
+    
+    return cus;
+    }
+
+    //insert function
+    
+    public static boolean insertResponses(String name, String email, String sub, String message) {
+    	
+    	boolean isSuccess = false;
+    	
+    	try {
+    		Class.forName("com.mysql.jdbc.Driver");
+    		con = DBConnect.getConnection();
+        	stat = con.createStatement();
+        	String sql = "insert into contact_responses values ('"+name+"', '"+email+"', '"+sub+"', '"+message+"')";
+        	int rs = stat.executeUpdate(sql);
+        
+
+        	if(rs > 0) {
+        	isSuccess = true;
+        	}
+        	else {
+        	isSuccess = false;
+        	}
+        	}
+        	catch(Exception e) {
+        	e.printStackTrace();
+        	}
+
+        	return isSuccess;
+    	}
+    
+    //retrieve 
+    
+    /*public static List<contact> getCustomercontact(String name, String email, String sub, String message){
+    	
+    	ArrayList<contact> cus = new ArrayList<>();
+    	
+    	try {
+    		
+    		Class.forName("com.mysql.jdbc.Driver");
+    		con = DBConnect.getConnection();
+        	stat = con.createStatement();
+        	String sql = "select Name, Email, Subject, Message from contact_responses where email = '"+email+"'";
+    		rs = stat.executeQuery(sql);
+    		
+    		while (rs.next()) {
+    			String nameR = rs.getString(1);
+    			String emailR = rs.getString(2);
+    			String subjectR = rs.getString(3);
+    			String messageR = rs.getString(4);
+    			
+    			contact c = new contact(nameR,emailR,subjectR,messageR);
+    			
+    			cus.add(c);
+    		}
+    	}
+    		
+    		catch(Exception e) {
+    			e.printStackTrace();
+    		}
+    	
+    return cus;
+    }*/
+    
+    //Display insert details
+    
+    public static List<Disdetails> displayInsert (String name, String email, String sub, String message){
+    	
+    	ArrayList<Disdetails> dis = new ArrayList<>();
+    	
+    	try {
+            Class.forName("com.mysql.jdbc.Driver");
+               	
+        	con = DBConnect.getConnection();
+        	stat = con.createStatement();
+        	String sql = "select * from contact_responses where Name = '"+name+"' and  Email = '"+email+"' and Subject = '"+sub+"' and Message = '"+message+"'";
+        	rs = stat.executeQuery(sql);
+            
+            if (rs.next()) {
+            	String nameR = rs.getString(1);
+    			String emailR = rs.getString(2);
+    			String subjectR = rs.getString(3);
+    			String messageR = rs.getString(4);
+            	
+            	
+            Admin a = new Admin (userA, passwordA);
+            cus.add(a);
+            }
+        }
+        
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        return cus;
+        }
+
+    	
+    	
+    }
+}
